@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+
+@layer components {
+    .clock {
+        @apply h-screen bg-gradient-to-r from-amber-500 from-50% to-green-800 to-50% flex flex-col items-center justify-center
+    }
+    .clock h1 {
+        @apply uppercase font-bold text-white text-4xl tracking-[25px]
+    }
+    .clock section {
+        @apply grid md:grid-cols-5 grid-cols-1 md:gap-10 gap-2
+    }
+    .clock div {
+        @apply flex flex-col items-center mt-10
+    }
+    .clock div :first-child {
+        @apply text-3xl bg-blue-900 text-white h-20 flex items-center justify-center w-full rounded-t-lg
+    }
+    .clock div :last-child {
+        @apply text-xl capitalize bg-slate-950 text-white h-10 flex items-center justify-center rounded-b-lg w-full p-5
+    }
+    .clock div:last-of-type :last-child {
+        @apply mt-10
+    }
+}
